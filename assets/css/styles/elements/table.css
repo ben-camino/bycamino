@@ -1,0 +1,29 @@
+/* Table */
+:where(table) {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-indent: 0;
+}
+
+th,
+td {
+    padding: calc(var(--spacing) / 2) var(--spacing);
+    border-bottom: var(--border-width) solid var(--table-border-color);
+    background-color: var(--background-color);
+    color: var(--color);
+    font-weight: var(--font-weight);
+    text-align: left;
+    text-align: start;
+}
+
+tfoot th,
+tfoot td {
+    border-top: var(--border-width) solid var(--table-border-color);
+    border-bottom: 0;
+}
+
+table.striped tbody tr:nth-child(odd) th,
+table.striped tbody tr:nth-child(odd) td {
+    background-color: var(--table-row-stripped-background-color);
+}

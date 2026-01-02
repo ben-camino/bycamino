@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- meta -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- title -->
+        {{ with .Title }}
+        <title>{{ . }}</title>
+        {{ end }}
+
+        <!-- description -->
+        {{ with .Description }}
+        <meta name="description" content="{{ . }}" />
+        {{ end }}
+
+        <!-- favicon -->
+        {{ with resources.Get "favicon.png" }} {{ $favicon := .Fill "48x48 png"
+        }}
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="{{ $favicon.RelPermalink }}"
+        />
+        {{ end }}
+
+        <!-- css -->
+        {{ with resources.Match "css/**.css" }} {{ $css := . | resources.Concat
+        "main.css" | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $css.RelPermalink }}" media="all" />
+        {{ end }}
+
+        <!-- inter font -->
+        <link rel="preconnect" href="https://rsms.me/" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    </head>
+
+    <body>
+        <!-- header -->
+        <header>Header</header>
+
+        <!-- aside -->
+        <aside>Aside</aside>
+
+        <!-- content -->
+        <main>{{ block "main" . }}{{ end }}</main>
+
+        <!-- footer -->
+        <footer>Footer</footer>
+    </body>
+</html>

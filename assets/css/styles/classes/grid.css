@@ -1,0 +1,15 @@
+/* Grid */
+.grid {
+    grid-column-gap: var(--grid-column-gap);
+    grid-row-gap: var(--grid-row-gap);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+    }
+}
+.grid > * {
+    min-width: 0;
+}

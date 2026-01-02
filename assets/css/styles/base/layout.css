@@ -1,0 +1,97 @@
+/* Layout */
+html {
+    background-color: var(--background-color);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+}
+
+body > header {
+    grid-area: header;
+    padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+body > header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--muted-border-color);
+    z-index: -1;
+}
+
+body > aside {
+    grid-area: aside;
+    padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
+    position: relative;
+}
+
+body > aside::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: calc(-50vw + 125px); /* 125px is half of 250px aside width */
+    /* border-right: solid var(--border-width) var(--muted-border-color); */
+    z-index: -1;
+}
+
+body > main {
+    grid-area: main;
+    padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
+    min-width: 0;
+}
+
+body > footer {
+    grid-area: footer;
+    padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
+    position: relative;
+}
+
+body > footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    border-top: 1px solid var(--muted-border-color);
+    z-index: -1;
+}
+
+body {
+    width: 100%;
+    max-width: 1450px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "aside"
+            "main"
+            "footer";
+    }
+}

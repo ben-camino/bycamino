@@ -1,0 +1,85 @@
+/* Link */
+:where(a:not([role="button"])),
+[role="link"] {
+    --color: var(--primary);
+    --background-color: transparent;
+    --underline: var(--primary-underline);
+    outline: none;
+    background-color: var(--background-color);
+    color: var(--color);
+    -webkit-text-decoration: var(--text-decoration);
+    text-decoration: var(--text-decoration);
+    text-decoration-color: var(--underline);
+    text-underline-offset: 0.125em;
+    transition: background-color var(--transition), color var(--transition),
+        box-shadow var(--transition), -webkit-text-decoration var(--transition);
+    transition: background-color var(--transition), color var(--transition),
+        text-decoration var(--transition), box-shadow var(--transition);
+    transition: background-color var(--transition), color var(--transition),
+        text-decoration var(--transition), box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+}
+:where(a:not([role="button"])):is(
+        [aria-current]:not([aria-current="false"]),
+        :hover,
+        :active,
+        :focus
+    ),
+[role="link"]:is(
+        [aria-current]:not([aria-current="false"]),
+        :hover,
+        :active,
+        :focus
+    ) {
+    --color: var(--primary-hover);
+    --underline: var(--primary-hover-underline);
+    --text-decoration: underline;
+}
+:where(a:not([role="button"])):focus-visible,
+[role="link"]:focus-visible {
+    box-shadow: 0 0 0 var(--outline-width) var(--primary-focus);
+}
+:where(a:not([role="button"])).secondary,
+[role="link"].secondary {
+    --color: var(--secondary);
+    --underline: var(--secondary-underline);
+}
+:where(a:not([role="button"])).secondary:is(
+        [aria-current]:not([aria-current="false"]),
+        :hover,
+        :active,
+        :focus
+    ),
+[role="link"].secondary:is(
+        [aria-current]:not([aria-current="false"]),
+        :hover,
+        :active,
+        :focus
+    ) {
+    --color: var(--secondary-hover);
+    --underline: var(--secondary-hover-underline);
+}
+:where(a:not([role="button"])).contrast,
+[role="link"].contrast {
+    --color: var(--contrast);
+    --underline: var(--contrast-underline);
+}
+:where(a:not([role="button"])).contrast:is(
+        [aria-current]:not([aria-current="false"]),
+        :hover,
+        :active,
+        :focus
+    ),
+[role="link"].contrast:is(
+        [aria-current]:not([aria-current="false"]),
+        :hover,
+        :active,
+        :focus
+    ) {
+    --color: var(--contrast-hover);
+    --underline: var(--contrast-hover-underline);
+}
+
+a[role="button"] {
+    display: inline-block;
+}
