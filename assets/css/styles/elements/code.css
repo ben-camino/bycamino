@@ -4,7 +4,7 @@ code,
 kbd,
 samp {
     font-size: 0.875em;
-    font-family: var(--font-family);
+    font-family: var(--font-family-monospace);
 }
 
 pre code,

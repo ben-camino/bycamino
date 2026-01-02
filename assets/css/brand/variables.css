@@ -3,12 +3,11 @@
 :host {
     --font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji",
         "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-sans-serif: system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu,
-        Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif,
-        var(--font-family-emoji);
+    --font-family-sans-serif: Inter, Helvetica, Arial, "Helvetica Neue",
+        sans-serif, var(--font-family-emoji);
     --font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo,
         Consolas, "Liberation Mono", monospace, var(--font-family-emoji);
-    --font-family: var(--font-family-sans-serif);
+    --font-family-serif: var(--font-family-sans-serif);
     --line-height: 1.5;
     --font-weight: 400;
     --font-size: 100%;

@@ -1,4 +1,18 @@
-{{ define "main" }}
+{{ define "page" }}
+<aside>Aside</aside>
+<main>
+    <!-- Range child pages -->
+    {{ with .Data.Pages }}
+    <div class="grid">
+        {{ range . }}
+        <article>
+            <a class="contrast" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </article>
+        {{ end }}
+    </div>
+    {{ end }}
 
-<!-- markdown content -->
-{{ with .Content }} {{ . }} {{ end }} {{ end }}
+    <!-- Markdown content -->
+    {{ with .Content }} {{ . }} {{ end }}
+</main>
+{{ end }}

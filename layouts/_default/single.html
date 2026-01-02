@@ -1,4 +1,19 @@
-{{ define "main" }}
+{{ define "page" }}
+<aside>Aside</aside>
+<main>
+    <!-- Markdown content -->
+    {{ with .Content }} {{ . }} {{ end }}
 
-<!-- markdown content -->
-{{ with .Content }} {{ . }} {{ end }} {{ end }}
+    <!-- With sibling pages -->
+    {{ with .PrevInSection }}
+
+    <div>
+        <h3>Next:</h3>
+        <article>
+            <a class="contrast" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </article>
+    </div>
+
+    {{ end }}
+</main>
+{{ end }}

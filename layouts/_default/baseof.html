@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- meta -->
+        <!-- Meta -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- title -->
+        <!-- Title -->
         {{ with .Title }}
         <title>{{ . }}</title>
         {{ end }}
 
-        <!-- description -->
+        <!-- Description -->
         {{ with .Description }}
         <meta name="description" content="{{ . }}" />
         {{ end }}
 
-        <!-- favicon -->
+        <!-- Favicon -->
         {{ with resources.Get "favicon.png" }} {{ $favicon := .Fill "48x48 png"
         }}
         <link
@@ -25,28 +25,54 @@
         />
         {{ end }}
 
-        <!-- css -->
+        <!-- CSS -->
         {{ with resources.Match "css/**.css" }} {{ $css := . | resources.Concat
         "main.css" | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $css.RelPermalink }}" media="all" />
         {{ end }}
 
-        <!-- inter font -->
+        <!-- Inter font -->
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap"
+        />
     </head>
 
     <body>
-        <!-- header -->
-        <header>Header</header>
+        <!-- Header -->
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="contrast wordmark" href="/"
+                            ><strong>{{ .Site.Title }}</strong></a
+                        >
+                    </li>
+                </ul>
+                <ul>
+                    {{ with .Site.GetPage "/" }}
+                    <ul>
+                        {{ range .Pages }}
+                        <li>
+                            <a href="{{ .RelPermalink}}">{{ .Title }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                </ul>
+            </nav>
+        </header>
 
-        <!-- aside -->
-        <aside>Aside</aside>
+        <!-- Page -->
+        {{ block "page" . }}{{ end }}
 
-        <!-- content -->
-        <main>{{ block "main" . }}{{ end }}</main>
-
-        <!-- footer -->
+        <!-- Footer -->
         <footer>Footer</footer>
     </body>
 </html>

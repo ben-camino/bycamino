@@ -41,6 +41,8 @@ body > aside {
     grid-area: aside;
     padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
     position: relative;
+    background-color: var(--background-color);
+    border-right: 1px solid var(--muted-border-color);
 }
 
 body > aside::before {

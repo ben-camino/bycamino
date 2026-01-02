@@ -47,7 +47,7 @@ h6 {
     font-weight: var(--font-weight);
     font-size: var(--font-size);
     line-height: var(--line-height);
-    font-family: var(--font-family);
+    font-family: var(--font-family-serif);
 }
 
 h1 {
