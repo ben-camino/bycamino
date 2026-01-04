@@ -1,18 +1,35 @@
 {{ define "page" }}
-<aside>Aside</aside>
 <main>
-    <!-- Range child pages -->
+    <!-- Header -->
+    <header>
+        <h6>{{ .Title }}</h6>
+        <h1>This is a description of the site.</h1>
+    </header>
+
+    <!-- Featured pages -->
     {{ with .RegularPagesRecursive }}
-    <div class="grid">
-        {{ range . }} {{ if .Params.Featured }}
-        <article>
-            <a class="contrast" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </article>
-        {{ else }} {{ end }} {{ end }}
-    </div>
+    <section>
+        <header>
+            <h6>Featured</h6>
+            <h2>This is a description of the section.</h2>
+        </header>
+        <table>
+            <tbody>
+                {{ range . }} {{ if .Params.Featured }}
+                <tr>
+                    <td>
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </td>
+                </tr>
+                {{ end }} {{ else }}{{ end }}
+            </tbody>
+        </table>
+    </section>
     {{ end }}
 
-    <!-- Markdown content -->
-    {{ with .Content }} {{ . }} {{ end }}
+    <!-- Markdown -->
+    {{ with .Content }}
+    <section>{{ . }}</section>
+    {{ end }}
 </main>
 {{ end }}

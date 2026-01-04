@@ -1,4 +1,85 @@
 /* Typography  */
+small {
+    --font-size: 0.875em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    --font-weight: 700;
+    margin-top: 0;
+    margin-bottom: var(--typography-spacing-vertical);
+    color: var(--color);
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    font-family: var(--font-family-serif);
+}
+
+h1 {
+    --color: var(--h1-color);
+    --font-size: 2rem;
+    --line-height: 1.125;
+    --typography-spacing-top: 3rem;
+}
+
+h2 {
+    --color: var(--h2-color);
+    --font-size: 1.75rem;
+    --line-height: 1.15;
+    --typography-spacing-top: 2.625rem;
+}
+
+h3 {
+    --color: var(--h3-color);
+    --font-size: 1.5rem;
+    --line-height: 1.175;
+    --typography-spacing-top: 2.25rem;
+}
+
+h4 {
+    --color: var(--h4-color);
+    --font-size: 1.25rem;
+    --line-height: 1.2;
+    --typography-spacing-top: 1.874rem;
+}
+
+h5 {
+    --color: var(--h5-color);
+    --font-size: 1.125rem;
+    --line-height: 1.225;
+    --typography-spacing-top: 1.6875rem;
+}
+
+h6 {
+    --color: var(--h6-color);
+    --font-size: 1rem;
+    --line-height: 1.25;
+    --typography-spacing-top: 1.5rem;
+}
+
+thead th,
+thead td,
+tfoot th,
+tfoot td {
+    --font-weight: 600;
+    --border-width: 0.1875rem;
+}
+
+pre,
+code,
+kbd,
+samp {
+    --font-family: var(--font-family-monospace);
+}
+
+kbd {
+    --font-weight: bolder;
+}
+
 b,
 strong {
     font-weight: bolder;
@@ -35,45 +116,6 @@ ul {
     font-weight: var(--font-weight);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 0;
-    margin-bottom: var(--typography-spacing-vertical);
-    color: var(--color);
-    font-weight: var(--font-weight);
-    font-size: var(--font-size);
-    line-height: var(--line-height);
-    font-family: var(--font-family-serif);
-}
-
-h1 {
-    --color: var(--h1-color);
-}
-
-h2 {
-    --color: var(--h2-color);
-}
-
-h3 {
-    --color: var(--h3-color);
-}
-
-h4 {
-    --color: var(--h4-color);
-}
-
-h5 {
-    --color: var(--h5-color);
-}
-
-h6 {
-    --color: var(--h6-color);
-}
-
 :where(article, address, blockquote, dl, figure, form, ol, p, pre, table, ul)
     ~ :is(h1, h2, h3, h4, h5, h6) {
     margin-top: var(--typography-spacing-top);
@@ -81,19 +123,6 @@ h6 {
 
 p {
     margin-bottom: var(--typography-spacing-vertical);
-}
-
-hgroup {
-    margin-bottom: var(--typography-spacing-vertical);
-}
-hgroup > * {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-hgroup > *:not(:first-child):last-child {
-    --color: var(--muted-color);
-    --font-weight: unset;
-    font-size: 1rem;
 }
 
 :where(ol, ul) li {

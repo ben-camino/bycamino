@@ -76,79 +76,11 @@
 }
 
 a {
-    --text-decoration: underline;
+    --text-decoration: none;
 }
 a.secondary,
 a.contrast {
-    --text-decoration: underline;
-}
-
-small {
-    --font-size: 0.875em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    --font-weight: 700;
-}
-
-h1 {
-    --font-size: 2rem;
-    --line-height: 1.125;
-    --typography-spacing-top: 3rem;
-}
-
-h2 {
-    --font-size: 1.75rem;
-    --line-height: 1.15;
-    --typography-spacing-top: 2.625rem;
-}
-
-h3 {
-    --font-size: 1.5rem;
-    --line-height: 1.175;
-    --typography-spacing-top: 2.25rem;
-}
-
-h4 {
-    --font-size: 1.25rem;
-    --line-height: 1.2;
-    --typography-spacing-top: 1.874rem;
-}
-
-h5 {
-    --font-size: 1.125rem;
-    --line-height: 1.225;
-    --typography-spacing-top: 1.6875rem;
-}
-
-h6 {
-    --font-size: 1rem;
-    --line-height: 1.25;
-    --typography-spacing-top: 1.5rem;
-}
-
-thead th,
-thead td,
-tfoot th,
-tfoot td {
-    --font-weight: 600;
-    --border-width: 0.1875rem;
-}
-
-pre,
-code,
-kbd,
-samp {
-    --font-family: var(--font-family-monospace);
-}
-
-kbd {
-    --font-weight: bolder;
+    --text-decoration: none;
 }
 
 input:not(

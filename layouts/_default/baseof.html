@@ -55,17 +55,15 @@
                         >
                     </li>
                 </ul>
+                {{ with .Site.GetPage "/" }}
                 <ul>
-                    {{ with .Site.GetPage "/" }}
-                    <ul>
-                        {{ range .Pages }}
-                        <li>
-                            <a href="{{ .RelPermalink}}">{{ .Title }}</a>
-                        </li>
-                        {{ end }}
-                    </ul>
+                    {{ range .Pages }}
+                    <li>
+                        <a href="{{ .RelPermalink}}">{{ .Title }}</a>
+                    </li>
                     {{ end }}
                 </ul>
+                {{ end }}
             </nav>
         </header>
 
@@ -73,6 +71,6 @@
         {{ block "page" . }}{{ end }}
 
         <!-- Footer -->
-        <footer>Footer</footer>
+        <footer>© {{ .Site.Title }} {{ now.Year }}</footer>
     </body>
 </html>

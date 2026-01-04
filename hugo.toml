@@ -1,3 +1,6 @@
 baseURL = 'https://bycamino.com/'
 languageCode = 'en-us'
 title = 'Camino'
+contributors = [ "ben" ]
+[taxonomies]
+  contributor = 'contributors'

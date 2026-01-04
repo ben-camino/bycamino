@@ -1,0 +1,57 @@
+{{ define "page" }}
+<aside>
+    <!-- Range child pages -->
+    {{ with .Site.GetPage "/work" }}
+    <nav>
+        <ul>
+            {{ range .Pages }}
+            <li>
+                <a class="secondary" href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+    {{ end }}
+</aside>
+<main>
+    <!-- Header -->
+    <header>
+        <hgroup>
+            <!-- Title -->
+            <h1>{{ .Title }}</h1>
+
+            <!-- Contributors -->
+            {{ with .GetTerms "contributors" }}
+            <div>
+                {{ range . }}
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{ end }}
+            </div>
+            {{ end }}
+        </hgroup>
+    </header>
+
+    <!-- Markdown -->
+    {{ with .Content }}
+    <section>{{ . }}</section>
+    {{ end }}
+
+    <!-- Next page -->
+    {{ with .PrevInSection }}
+    <section>
+        <h4>Next:</h4>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    {{ end }}
+</main>
+{{ with .TableOfContents }}
+<aside class="toc">{{ . }}</aside>
+{{ end }} {{ end }}

@@ -1,19 +1,15 @@
 {{ define "page" }}
 <aside>Aside</aside>
 <main>
-    <!-- Markdown content -->
-    {{ with .Content }} {{ . }} {{ end }}
+    <!-- Header -->
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
 
-    <!-- With sibling pages -->
-    {{ with .PrevInSection }}
-
-    <div>
-        <h3>Next:</h3>
-        <article>
-            <a class="contrast" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </article>
-    </div>
-
+    <!-- Markdown -->
+    {{ with .Content }}
+    <section>{{ . }}</section>
     {{ end }}
 </main>
+<aside class="toc">Table of Contents</aside>
 {{ end }}

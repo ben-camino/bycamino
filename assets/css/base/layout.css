@@ -1,6 +1,6 @@
 /* Layout */
 html {
-    background-color: var(--background-color);
+    background-color: var(--color-light);
 }
 
 body {
@@ -8,12 +8,12 @@ body {
     min-height: 100vh;
     margin: 0;
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 250px 1fr 250px;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        "header header"
-        "aside main"
-        "footer footer";
+        "header header header"
+        "aside main toc"
+        "footer footer footer";
 }
 
 body > header {
@@ -41,19 +41,10 @@ body > aside {
     grid-area: aside;
     padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
     position: relative;
-    background-color: var(--background-color);
-    border-right: 1px solid var(--muted-border-color);
 }
 
-body > aside::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: calc(-50vw + 125px); /* 125px is half of 250px aside width */
-    /* border-right: solid var(--border-width) var(--muted-border-color); */
-    z-index: -1;
+body > .toc {
+    grid-area: toc;
 }
 
 body > main {
@@ -68,18 +59,6 @@ body > footer {
     position: relative;
 }
 
-body > footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    border-top: 1px solid var(--muted-border-color);
-    z-index: -1;
-}
-
 body {
     width: 100%;
     max-width: 1450px;
@@ -92,8 +71,41 @@ body {
         grid-template-columns: 1fr;
         grid-template-areas:
             "header"
-            "aside"
             "main"
             "footer";
     }
+
+    body > aside {
+        display: none;
+    }
+}
+
+/* Grid */
+.grid {
+    grid-column-gap: var(--grid-column-gap);
+    grid-row-gap: var(--grid-row-gap);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+    }
+}
+.grid > * {
+    min-width: 0;
+}
+
+/* Header group */
+hgroup {
+    margin-bottom: var(--typography-spacing-vertical);
+}
+hgroup > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+hgroup > *:not(:first-child):last-child {
+    --color: var(--muted-color);
+    --font-weight: unset;
+    font-size: 1rem;
 }

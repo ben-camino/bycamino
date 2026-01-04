@@ -1,3 +1,0 @@
-+++
-Title = "JumpCloud MSP"
-+++
