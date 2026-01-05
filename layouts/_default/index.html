@@ -1,16 +1,9 @@
 {{ define "page" }}
 <main>
     <!-- Header -->
-    <header>
+    <section>
         <h1>{{ .Title }}</h1>
-        <nav aria-label="breadcrumb">
-            <ul>
-                <li><a href="#">Grandparent</a> /</li>
-                <li><a href="#">Parent</a> /</li>
-                <li>Page</li>
-            </ul>
-        </nav>
-    </header>
+    </section>
 
     <!-- Featured pages -->
     {{ with .RegularPagesRecursive }}
