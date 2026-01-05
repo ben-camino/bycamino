@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/* All */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+::before,
+::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}

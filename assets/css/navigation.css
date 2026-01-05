@@ -1,14 +1,11 @@
 /* Navigation */
 
-nav {
-    display: flex;
-    justify-content: space-between;
-}
-
 nav ol,
-nav ul {
+nav ul,
+nav li {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     unicode-bidi: isolate;
     list-style: none;
     margin: 0;
@@ -16,20 +13,20 @@ nav ul {
     gap: 1rem;
 }
 
-nav li {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 0.5rem;
-}
 nav a {
-    color: var(--text-display);
+    color: var(--grey-8);
     display: flex;
     gap: 4px;
 }
 
-aside nav ol,
-aside nav ul {
-    flex-direction: column;
-    align-items: flex-start;
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ol,
+header nav ul,
+header nav li {
+    flex-direction: row;
+    align-items: center;
 }

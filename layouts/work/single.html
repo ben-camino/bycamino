@@ -40,20 +40,12 @@
     {{ with .PrevInSection }}
     <section>
         <h4>Next:</h4>
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </section>
     {{ end }}
 </main>
 
+<!-- Table of contents -->
 {{ with .TableOfContents }}
-<!-- <aside class="toc">{{ . }}</aside> -->
-
+<aside class="toc">{{ . }}</aside>
 {{ end }} {{ end }}

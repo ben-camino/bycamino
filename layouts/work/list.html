@@ -7,17 +7,16 @@
 
     <!-- Range child pages -->
     {{ with .Pages }}
-    <table>
-        <tbody>
-            {{ range . }}
-            <tr>
-                <td>
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </td>
-            </tr>
-            {{ end }}
-        </tbody>
-    </table>
+    <section>
+        <h2>Child Pages:</h2>
+        <nav>
+            <ul>
+                {{ range . }} {{ if .Params.Featured }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }} {{ else }}{{ end }}
+            </ul>
+        </nav>
+    </section>
     {{ end }}
 
     <!-- Markdown -->
