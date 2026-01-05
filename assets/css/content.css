@@ -1,0 +1,114 @@
+/* Content */
+
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: InterVariable, sans-serif;
+    }
+}
+
+a {
+    color: var(--text-info);
+    text-decoration: none;
+    -webkit-text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.125rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--text-display);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 0.75em;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+address,
+blockquote,
+dl,
+ol,
+p,
+pre,
+table,
+ul {
+    margin: 1rem 0;
+    color: var(--text-display);
+    font-style: normal;
+    font-weight: 400;
+}
+
+ul li {
+    list-style: disc;
+}
+
+mark {
+    padding: 0.125rem 0.25rem;
+    background-color: var(--background-info);
+    color: var(--text-info);
+    vertical-align: baseline;
+}
+
+blockquote {
+    display: block;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-right: none;
+    border-left: 1px solid var(--border-subtle);
+    border-inline-start: 1px solid var(--border-subtle);
+    border-inline-end: none;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+    text-decoration: none;
+    cursor: help;
+}
+
+ins {
+    color: var(--text-success);
+    text-decoration: none;
+}
+
+del {
+    color: var(--text-alert);
+}
+
+::-moz-selection {
+    background-color: var(--background-info);
+}
+
+::selection {
+    background-color: var(--background-info);
+}

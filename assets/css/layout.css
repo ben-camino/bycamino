@@ -1,0 +1,58 @@
+/* Layout */
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1450px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+body > header {
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    z-index: 10;
+}
+
+body > header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background-color: var(--background-display);
+    border-bottom: 1px solid var(--border-subtle);
+    z-index: -1;
+}
+
+body > main {
+    min-width: 0;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+body > footer {
+    position: relative;
+    padding: 1rem;
+}
+
+body > footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background-color: var(--background-display);
+    border-top: 1px solid var(--border-subtle);
+    z-index: -1;
+}
+
+aside {
+    padding: 1rem;
+}

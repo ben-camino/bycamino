@@ -1,0 +1,35 @@
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ol,
+nav ul {
+    display: flex;
+    align-items: center;
+    unicode-bidi: isolate;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+nav li {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+}
+nav a {
+    color: var(--text-display);
+    display: flex;
+    gap: 4px;
+}
+
+aside nav ol,
+aside nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+}
