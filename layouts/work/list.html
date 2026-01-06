@@ -1,22 +1,65 @@
 {{ define "page" }}
-<main>
+<main class="work">
     <!-- Header -->
-    <header>
-        <h1>{{ .Title }}</h1>
+    <header class="work-header">
+        <h1 class="heading-6">{{ .Title }}</h1>
+        <h2 class="heading-1">
+            Take a look at our spectacular work, spanning many services and
+            clients
+        </h2>
     </header>
 
     <!-- Range child pages -->
     {{ with .Pages }}
-    <section>
-        <h2>Child Pages:</h2>
-        <nav>
-            <ul>
-                {{ range . }} {{ if .Params.Featured }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                {{ end }} {{ else }}{{ end }}
-            </ul>
-        </nav>
-    </section>
+    <nav>
+        <ul class="work-list">
+            {{ range . }}
+            <li
+                class="work-item"
+                role="link"
+                tabindex="0"
+                data-href="{{ .RelPermalink }}"
+            >
+                <header>
+                    <!-- Client -->
+                    {{ with .Params.Client }}
+                    <p>{{ . }}</p>
+                    {{ end }}
+                    <!-- Title -->
+                    <a class="heading-4" href="{{ .RelPermalink }}"
+                        >{{ .Title }}</a
+                    >
+                    <!-- Description -->
+                    {{ with .Description }}
+                    <p>{{ . }}</p>
+                    {{ end }}
+                    <!-- image -->
+                    {{ range first 1 (.Resources.ByType "image") }} {{
+                    $image_fmt := .Resize "x640 webp q90" }} {{ $name :=
+                    strings.TrimSuffix (path.Ext .Name) .Name }} {{ $name_fmt :=
+                    humanize $name}}
+                    <img
+                        src="{{ $image_fmt.RelPermalink }}"
+                        width="auto"
+                        height="320"
+                        alt="{{ $name_fmt }}"
+                    />
+                    {{ end }}
+                </header>
+                <!-- Services -->
+                {{ with .Params.Services}}
+                <footer>
+                    <div class="services">
+                        {{ range . }}
+                        <p>{{ . }}</p>
+                        {{ end }}
+                    </div>
+                </footer>
+                {{ end }}
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
     {{ end }}
 
     <!-- Markdown -->

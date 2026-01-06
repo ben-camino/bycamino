@@ -7,6 +7,8 @@
     color-scheme: light;
     --white: #ffffff;
     --black: #000000;
+    --white-static: #ffffff;
+    --black-static: #000000;
     --grey-0: #f7f7f7;
     --grey-1: #eeeeee;
     --grey-2: #dddddd;
@@ -47,6 +49,16 @@
     --red-7: #7e280e;
     --red-8: #541b09;
     --red-9: #2a0d05;
+    --yellow-0: #fefce7;
+    --yellow-1: #fcf9cf;
+    --yellow-2: #faf29e;
+    --yellow-3: #f7ec6e;
+    --yellow-4: #f5e53d;
+    --yellow-5: #f2df0d;
+    --yellow-6: #c2b20a;
+    --yellow-7: #918608;
+    --yellow-8: #615905;
+    --yellow-9: #302d03;
 }
 
 /* Dark (automatic) */
@@ -56,6 +68,8 @@
         color-scheme: dark;
         --white: #000000;
         --black: #ffffff;
+        --white-static: #ffffff;
+        --black-static: #000000;
         --grey-9: #f7f7f7;
         --grey-8: #eeeeee;
         --grey-7: #dddddd;
@@ -96,6 +110,16 @@
         --red-2: #7e280e;
         --red-1: #541b09;
         --red-0: #2a0d05;
+        --yellow-9: #fefce7;
+        --yellow-8: #fcf9cf;
+        --yellow-7: #faf29e;
+        --yellow-6: #f7ec6e;
+        --yellow-5: #f5e53d;
+        --yellow-4: #f2df0d;
+        --yellow-3: #c2b20a;
+        --yellow-2: #918608;
+        --yellow-1: #615905;
+        --yellow-0: #302d03;
     }
 }
 
@@ -104,6 +128,8 @@
     color-scheme: dark;
     --white: #000000;
     --black: #ffffff;
+    --white-static: #ffffff;
+    --black-static: #000000;
     --grey-9: #f7f7f7;
     --grey-8: #eeeeee;
     --grey-7: #dddddd;
@@ -144,4 +170,14 @@
     --red-2: #7e280e;
     --red-1: #541b09;
     --red-0: #2a0d05;
+    --yellow-9: #fefce7;
+    --yellow-8: #fcf9cf;
+    --yellow-7: #faf29e;
+    --yellow-6: #f7ec6e;
+    --yellow-5: #f5e53d;
+    --yellow-4: #f2df0d;
+    --yellow-3: #c2b20a;
+    --yellow-2: #918608;
+    --yellow-1: #615905;
+    --yellow-0: #302d03;
 }
