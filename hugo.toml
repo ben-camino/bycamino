@@ -4,3 +4,4 @@ title = 'Camino'
 contributors = [ "ben" ]
 [taxonomies]
   contributor = 'contributors'
+  service = 'services'
