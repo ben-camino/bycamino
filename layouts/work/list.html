@@ -21,39 +21,40 @@
     <nav>
         <ul class="work-list">
             {{ range . }}
-            <li class="work-item">
-                <header>
-                    <!-- Client -->
-                    {{ with .Params.Client }}
-                    <p>{{ . }}</p>
-                    {{ end }}
-                    <!-- Title -->
-                    <a class="heading-4" href="{{ .RelPermalink }}"
-                        >{{ .Title }}</a
-                    >
-                    <!-- image -->
-                    {{ range first 1 (.Resources.ByType "image") }} {{
-                    $image_fmt := .Resize "x640 webp q90" }} {{ $name :=
-                    strings.TrimSuffix (path.Ext .Name) .Name }} {{ $name_fmt :=
-                    humanize $name}}
-                    <img
-                        src="{{ $image_fmt.RelPermalink }}"
-                        width="auto"
-                        height="320"
-                        alt="{{ $name_fmt }}"
-                    />
-                    {{ end }}
-                </header>
-                <!-- Services -->
-                {{ with .Params.Services}}
-                <footer>
-                    <div class="services">
-                        {{ range . }}
+            <li>
+                <a class="work-item" href="{{ .RelPermalink }}">
+                    <header>
+                        <!-- Client -->
+                        {{ with .Params.Client }}
                         <p>{{ . }}</p>
                         {{ end }}
-                    </div>
-                </footer>
-                {{ end }}
+                        <!-- Title -->
+                        <span class="heading-4">{{ .Title }}</span>
+                        <!-- image -->
+                        {{ range first 1 (.Resources.ByType "image") }} {{
+                        $image_fmt := .Resize "x640 webp q90" }} {{ $name :=
+                        strings.TrimSuffix (path.Ext .Name) .Name }} {{
+                        $name_fmt := humanize $name}}
+                        <img
+                            src="{{ $image_fmt.RelPermalink }}"
+                            width="auto"
+                            height="320"
+                            alt="{{ $name_fmt }}"
+                        />
+                        {{ end }}
+                    </header>
+                    <!-- Services -->
+                    {{ with .Params.Services}}
+                    <footer>
+                        <div class="services">
+                            {{ range . }} {{ $class := index
+                            $.Site.Params.taxonomies.services . }}
+                            <p class="service-tag {{ $class }}">{{ . }}</p>
+                            {{ end }}
+                        </div>
+                    </footer>
+                    {{ end }}
+                </a>
             </li>
             {{ end }}
         </ul>

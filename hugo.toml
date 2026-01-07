@@ -5,3 +5,7 @@ contributors = [ "ben" ]
 [taxonomies]
   contributor = 'contributors'
   service = 'services'
+[params.taxonomies.services]
+  "Product Design" = "service-product"
+  "Branding" = "service-branding"
+  "Web Development" = "service-web"
