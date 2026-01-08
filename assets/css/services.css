@@ -1,9 +1,26 @@
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
 .service-tag {
     color: var(--text-display);
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background-color: var(--grey-9);
+    background-color: var(--grey-2);
     border-radius: 0.375rem;
+    transition: all 0.2s ease;
+}
+
+.active::after {
+    content: "✓";
+}
+
+a.service-tag:hover {
+    text-decoration: none;
+    box-shadow: var(--shadow-4) 0px 0px 4px;
+    transition: all 0.2s ease;
 }
 
 .service-ux-design {

@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--blue-2);
-    box-shadow: var(--shadow-2) 0px 8px 18px;
+    box-shadow: var(--shadow-1) 0px 8px 18px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
@@ -39,20 +39,21 @@
     color: var(--white-static);
     margin: 0;
     text-shadow: var(--shadow-6) 2px 2px 24px;
+    text-transform: capitalize;
 }
 
 .work-item .subtitle {
     color: var(--white-static);
-    line-height: 1.125;
     margin: 0;
     text-shadow: var(--shadow-6) 2px 2px 24px;
+    text-transform: capitalize;
 }
 
 .work-item footer {
     display: flex;
     flex-wrap: wrap;
-    padding: 1rem;
     gap: 0.5rem;
+    padding: 1rem;
     z-index: 4;
 }
 
@@ -62,18 +63,21 @@
 
 .cover-img {
     position: absolute;
-    right: -4px;
-    bottom: -8px;
-    border-radius: 8px 0px 0px 0px;
-    height: 60%;
-    width: auto;
-    box-shadow: var(--shadow-2) 0px 8px 24px;
+    bottom: 0;
+    border-radius: 12px 0px 0px 0px;
+    width: 90%;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    aspect-ratio: 10/7;
+    object-fit: cover;
+    object-position: top left;
     transition: all 0.2s ease;
     z-index: 3;
 }
 
 .work-item:hover .cover-img {
-    bottom: -4px;
+    bottom: -8px;
     transition: all 0.2s ease;
 }
 
@@ -86,3 +90,4 @@
     object-fit: cover;
     z-index: 1;
     filter: brightness(0.75) saturate(0.5);
+}

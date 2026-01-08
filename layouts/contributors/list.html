@@ -1,21 +1,11 @@
 {{ define "main" }}
-<main class="work">
+<main>
     <!-- Header -->
     <header>
-        <h1 class="heading-6">{{ .Title }}</h1>
+        <h1 class="heading-6">Work</h1>
         <h2 class="heading-1">
             Here is all the excellent work by {{ .Title }}
         </h2>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/work/">All</a>
-                </li>
-                {{ range .Site.Taxonomies.services }}
-                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-                {{ end }}
-            </ul>
-        </nav>
     </header>
 
     <!-- Range child pages -->
