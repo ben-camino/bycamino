@@ -1,21 +1,22 @@
 .service-tag {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--white);
+    color: var(--text-display);
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background-color: var(--black);
+    background-color: var(--grey-9);
     border-radius: 0.375rem;
 }
 
 .service-ux-design {
+    color: var(--white-static);
     background-color: var(--blue-5);
 }
 
 .service-web-development {
+    color: var(--white-static);
     background-color: var(--green-5);
 }
 
 .service-messaging {
-    background-color: var(--grey-8);
+    color: var(--black-static);
+    background-color: var(--yellow-4);
 }

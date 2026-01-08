@@ -1,9 +1,9 @@
 .work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     align-items: stretch;
     justify-content: stretch;
+    gap: 1.5rem;
 }
 
 .work-item {
@@ -14,8 +14,8 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--blue-2);
+    box-shadow: var(--shadow-2) 0px 8px 18px;
     overflow: hidden;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     text-decoration: none;
     color: inherit;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -24,30 +24,28 @@
 
 .work-item:hover,
 .work-item:focus {
-    box-shadow: rgba(149, 157, 165, 0.3) 0px 12px 32px;
+    box-shadow: var(--shadow-2) 0px 12px 32px;
     text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.work-item:hover .cover-img {
-    bottom: -4px;
     transition: all 0.2s ease;
 }
 
 .work-item header {
     z-index: 5;
     padding: 1rem;
-    background: linear-gradient(hsla(240, 0%, 0%, 0.5), transparent);
+    background: linear-gradient(var(--shadow-6), transparent);
 }
 
-.work-item header * {
+.work-item .title {
     color: var(--white-static);
     margin: 0;
+    text-shadow: var(--shadow-6) 2px 2px 24px;
 }
 
-.work-item header .heading-4 {
-    font-weight: 800;
-    line-height: 1.25;
+.work-item .subtitle {
+    color: var(--white-static);
+    line-height: 1.125;
+    margin: 0;
+    text-shadow: var(--shadow-6) 2px 2px 24px;
 }
 
 .work-item footer {
@@ -66,12 +64,17 @@
     position: absolute;
     right: -4px;
     bottom: -8px;
-    border-radius: 4px;
-    height: 50%;
+    border-radius: 8px 0px 0px 0px;
+    height: 60%;
     width: auto;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: var(--shadow-2) 0px 8px 24px;
     transition: all 0.2s ease;
     z-index: 3;
+}
+
+.work-item:hover .cover-img {
+    bottom: -4px;
+    transition: all 0.2s ease;
 }
 
 .background-img {
@@ -79,7 +82,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    width: auto;
+    width: 100%;
+    object-fit: cover;
     z-index: 1;
-    filter: brightness(0.65);
-}
+    filter: brightness(0.75) saturate(0.5);

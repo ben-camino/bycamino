@@ -59,6 +59,10 @@
     --yellow-7: #918608;
     --yellow-8: #615905;
     --yellow-9: #302d03;
+    --shadow-2: hsla(0, 0%, 0%, 0.2);
+    --shadow-4: hsla(0, 0%, 0%, 0.4);
+    --shadow-6: hsla(0, 0%, 0%, 0.6);
+    --shadow-8: hsla(0, 0%, 0%, 0.8);
 }
 
 /* Dark (automatic) */
@@ -120,6 +124,10 @@
         --yellow-2: #918608;
         --yellow-1: #615905;
         --yellow-0: #302d03;
+        --shadow-2: hsla(0, 0%, 0%, 0.2);
+        --shadow-4: hsla(0, 0%, 0%, 0.4);
+        --shadow-6: hsla(0, 0%, 0%, 0.6);
+        --shadow-8: hsla(0, 0%, 0%, 0.8);
     }
 }
 
@@ -180,4 +188,8 @@
     --yellow-2: #918608;
     --yellow-1: #615905;
     --yellow-0: #302d03;
+    --shadow-2: hsla(0, 0%, 0%, 0.2);
+    --shadow-4: hsla(0, 0%, 0%, 0.4);
+    --shadow-6: hsla(0, 0%, 0%, 0.6);
+    --shadow-8: hsla(0, 0%, 0%, 0.8);
 }

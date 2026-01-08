@@ -6,10 +6,10 @@
             <a class="work-item" href="{{ .RelPermalink }}">
                 <header>
                     <!-- Title -->
-                    <p>{{ .Title }}</p>
+                    <p class="title">{{ .Title }}</p>
                     <!-- Description -->
                     {{ with .Params.Subtitle }}
-                    <h3 class="heading-4">{{ . }}</h3>
+                    <h4 class="subtitle">{{ . }}</h4>
                     {{ end }}
                 </header>
 
@@ -18,7 +18,9 @@
                 <footer>
                     {{ range . }} {{ $class := index
                     $.Site.Params.taxonomies.services . }}
-                    <p class="service-tag {{ $class }}">{{ . }}</p>
+                    <p class="service-tag {{ $class }}">
+                        <small>{{ . }}</small>
+                    </p>
                     {{ end }}
                 </footer>
                 {{ end }}
