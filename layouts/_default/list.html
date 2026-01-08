@@ -1,23 +1,20 @@
-{{ define "page" }}
+{{ define "main" }}
 <main>
     <!-- Header -->
     <header>
-        <h1>{{ .Title }}</h1>
+        <h1 class="heading-6">{{ .Title }}</h1>
     </header>
 
     <!-- Range child pages -->
-    {{ with .Data.Pages }}
-    <section>
-        <h2>Child Pages:</h2>
-        <nav>
-            <ul>
-                {{ range . }} {{ if .Params.Featured }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                {{ end }} {{ else }}{{ end }}
-            </ul>
-        </nav>
-    </section>
-    {{ end }}
+    {{ $paginator := .Paginator }} {{ with $paginator.Pages }}
+    <nav>
+        <ul>
+            {{ range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+    {{ end }} {{ partial "pagination.html" . }}
 
     <!-- Markdown -->
     {{ with .Content }}

@@ -1,65 +1,26 @@
-{{ define "page" }}
+{{ define "main" }}
 <main class="work">
     <!-- Header -->
-    <header class="work-header">
-        <h1 class="heading-6">Work</h1>
+    <header>
+        <h1 class="heading-6">{{ .Title }}</h1>
         <h2 class="heading-1">
             Take a look at our spectacular work, spanning many services and
             clients
         </h2>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/work/">All</a>
+                </li>
+                {{ range .Site.Taxonomies.services }}
+                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                {{ end }}
+            </ul>
+        </nav>
     </header>
 
-    <div class="services">
-        <a href="/work/">All</a>
-        {{ range .Site.Taxonomies.services }}
-        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-        {{ end }}
-    </div>
-
     <!-- Range child pages -->
-    {{ with .Pages }}
-    <nav>
-        <ul class="work-list">
-            {{ range . }}
-            <li>
-                <a class="work-item" href="{{ .RelPermalink }}">
-                    <header>
-                        <!-- Client -->
-                        {{ with .Params.Client }}
-                        <p>{{ . }}</p>
-                        {{ end }}
-                        <!-- Title -->
-                        <span class="heading-4">{{ .Title }}</span>
-                        <!-- image -->
-                        {{ range first 1 (.Resources.ByType "image") }} {{
-                        $image_fmt := .Resize "x640 webp q90" }} {{ $name :=
-                        strings.TrimSuffix (path.Ext .Name) .Name }} {{
-                        $name_fmt := humanize $name}}
-                        <img
-                            src="{{ $image_fmt.RelPermalink }}"
-                            width="auto"
-                            height="320"
-                            alt="{{ $name_fmt }}"
-                        />
-                        {{ end }}
-                    </header>
-                    <!-- Services -->
-                    {{ with .Params.Services}}
-                    <footer>
-                        <div class="services">
-                            {{ range . }} {{ $class := index
-                            $.Site.Params.taxonomies.services . }}
-                            <p class="service-tag {{ $class }}">{{ . }}</p>
-                            {{ end }}
-                        </div>
-                    </footer>
-                    {{ end }}
-                </a>
-            </li>
-            {{ end }}
-        </ul>
-    </nav>
-    {{ end }}
+    {{ partial "work-list.html" . }}
 
     <!-- Markdown -->
     {{ with .Content }}

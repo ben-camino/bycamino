@@ -1,0 +1,30 @@
+{{ define "main" }}
+<main class="work">
+    <!-- Header -->
+    <header>
+        <h1 class="heading-6">{{ .Title }}</h1>
+        <h2 class="heading-1">
+            Take a look at our spectacular work, spanning many services and
+            clients
+        </h2>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/work/">All</a>
+                </li>
+                {{ range .Site.Taxonomies.services }}
+                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                {{ end }}
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Range child pages -->
+    {{ partial "work-list.html" . }}
+
+    <!-- Markdown -->
+    {{ with .Content }}
+    <section>{{ . }}</section>
+    {{ end }}
+</main>
+{{ end }}

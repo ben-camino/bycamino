@@ -1,0 +1,58 @@
+{{ $paginator := .Paginator }} {{ with $paginator.Pages }}
+<nav>
+    <ul class="work-list">
+        {{ range . }}
+        <li>
+            <a class="work-item" href="{{ .RelPermalink }}">
+                <header>
+                    <!-- Title -->
+                    <p>{{ .Title }}</p>
+                    <!-- Description -->
+                    {{ with .Params.Subtitle }}
+                    <h3 class="heading-4">{{ . }}</h3>
+                    {{ end }}
+                </header>
+
+                <!-- Services -->
+                {{ with .Params.Services}}
+                <footer>
+                    {{ range . }} {{ $class := index
+                    $.Site.Params.taxonomies.services . }}
+                    <p class="service-tag {{ $class }}">{{ . }}</p>
+                    {{ end }}
+                </footer>
+                {{ end }}
+
+                <!-- Cover image -->
+                {{ $src := "cover/" }} {{ range .Page.Resources.ByType "image"
+                }} {{ if strings.Contains .Title $src }} {{ $src := .Resize
+                "1920x webp q90" }} {{ $name := strings.TrimSuffix (path.Ext
+                .Name) .Name }} {{ $name_fmt := humanize $name}}
+                <img
+                    class="cover-img"
+                    src="{{ $src.RelPermalink }}"
+                    width="auto"
+                    height="320"
+                    alt="{{ $name_fmt }}"
+                />
+                {{else}} {{ end }} {{ end }}
+
+                <!-- Background image-->
+                {{ $src := "background/" }} {{ range .Page.Resources.ByType
+                "image" }} {{ if strings.Contains .Title $src }} {{ $src :=
+                .Resize "1920x webp q90" }} {{ $name := strings.TrimSuffix
+                (path.Ext .Name) .Name }} {{ $name_fmt := humanize $name}}
+                <img
+                    class="background-img"
+                    src="{{ $src.RelPermalink }}"
+                    width="960px"
+                    height="auto"
+                    alt="{{ $name_fmt }}"
+                />
+                {{else}} {{ end }} {{ end }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>
+{{ end }} {{ partial "pagination.html" . }}

@@ -10,61 +10,76 @@
     position: relative;
     width: 100%;
     aspect-ratio: 1/1;
-
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    background-color: var(--blue-1);
+    justify-content: space-between;
+    background-color: var(--blue-2);
     overflow: hidden;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     text-decoration: none;
     color: inherit;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
 }
 
 .work-item:hover,
 .work-item:focus {
-    transform: translateY(-2px);
     box-shadow: rgba(149, 157, 165, 0.3) 0px 12px 32px;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 
-.work-item * {
-    margin: 0;
+.work-item:hover .cover-img {
+    bottom: -4px;
+    transition: all 0.2s ease;
 }
 
 .work-item header {
-    flex-grow: 1;
     z-index: 5;
+    padding: 1rem;
+    background: linear-gradient(hsla(240, 0%, 0%, 0.5), transparent);
+}
+
+.work-item header * {
+    color: var(--white-static);
+    margin: 0;
 }
 
 .work-item header .heading-4 {
     font-weight: 800;
-}
-
-.work-item header p {
-    color: var(--black);
+    line-height: 1.25;
 }
 
 .work-item footer {
-    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 0.5rem;
+    z-index: 4;
 }
 
-.work-item img {
+.work-item footer * {
+    margin: 0;
+}
+
+.cover-img {
     position: absolute;
     right: -4px;
-    bottom: -4px;
+    bottom: -8px;
     border-radius: 4px;
     height: 50%;
     width: auto;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all 0.2s ease;
+    z-index: 3;
 }
 
-.work > header h1 {
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.work > header h2 {
-    max-width: 720px;
+.background-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+    z-index: 1;
+    filter: brightness(0.65);
 }

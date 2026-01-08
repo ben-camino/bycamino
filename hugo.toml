@@ -6,6 +6,8 @@ contributors = [ "ben" ]
   contributor = 'contributors'
   service = 'services'
 [params.taxonomies.services]
-  "Product Design" = "service-product"
-  "Branding" = "service-branding"
-  "Web Development" = "service-web"
+  "UX Design" = "service-ux-design"
+  "Web Development" = "service-web-development"
+  "Messaging" = "service-messaging"
+[pagination]
+  pagerSize = 15
