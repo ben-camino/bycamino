@@ -1,13 +1,68 @@
 {{ define "main" }}
+<aside>
+    <!-- Range child pages -->
+    {{ with .Site.GetPage "/work" }}
+    <nav>
+        <ul>
+            {{ range .Pages }}
+            <li>
+                <a class="secondary" href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+    {{ end }}
+</aside>
 <main>
     <!-- Header -->
     <header>
-        <h1>{{ .Title }}</h1>
+        <h1 class="heading-6"><a href="/work/">Work</a> / {{ .Title }}</h1>
+        <h2 class="heading-1">
+            Take a look at our spectacular work, spanning many services and
+            clients
+        </h2>
+
+        <!-- Services -->
+        {{ with .Params.Services}}
+        <nav>
+            <ul class="services">
+                {{ range . }} {{ $class := index
+                $.Site.Params.taxonomies.services . }}
+                <li>
+                    <a href="/" class="service-tag {{ $class }}">
+                        <small>{{ . }}</small>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+        {{ end }}
+
+        <!-- Contributors -->
+        {{ with .GetTerms "contributors" }}
+        <div>
+            {{ range . }}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
     </header>
 
     <!-- Markdown -->
     {{ with .Content }}
     <section>{{ . }}</section>
     {{ end }}
+
+    <!-- Next page -->
+    {{ with .PrevInSection }}
+    <section>
+        <h4>Next:</h4>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </section>
+    {{ end }}
 </main>
-{{ end }}
+
+<!-- Table of contents -->
+{{ with .TableOfContents }}
+<aside class="toc">{{ . }}</aside>
+{{ end }} {{ end }}

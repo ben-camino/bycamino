@@ -2,19 +2,37 @@
 <main>
     <!-- Header -->
     <header>
-        <h1 class="heading-6">{{ .Title }}</h1>
+        <h1 class="heading-6">Work</h1>
+        <h2 class="heading-1">
+            Take a look at our spectacular work, spanning many services and
+            clients
+        </h2>
+        <!-- Services -->
+        <nav>
+            <ul class="services">
+                <li>
+                    <a class="service-tag active" href="/work/"
+                        ><small>All</small></a
+                    >
+                </li>
+
+                {{ range $name, $taxonomy := .Site.Taxonomies.services }} {{
+                $class := index $.Site.Params.taxonomies.services $name }} {{
+                $active := "" }} {{ if eq $taxonomy.Page.Permalink $.Permalink
+                }} {{ $active = "active" }} {{ end }}
+                <a
+                    class="service-tag {{ $class }} {{ $active }}"
+                    href="{{ $taxonomy.Page.Permalink }}"
+                >
+                    <small>{{ $taxonomy.Page.Title }}</small>
+                </a>
+                {{ end }}
+            </ul>
+        </nav>
     </header>
 
     <!-- Range child pages -->
-    {{ $paginator := .Paginator }} {{ with $paginator.Pages }}
-    <nav>
-        <ul>
-            {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ end }}
-        </ul>
-    </nav>
-    {{ end }} {{ partial "pagination.html" . }}
+    {{ partial "work-list.html" . }}
 
     <!-- Markdown -->
     {{ with .Content }}

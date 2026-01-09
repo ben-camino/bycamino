@@ -1,6 +1,6 @@
 .work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     align-items: stretch;
     justify-content: stretch;
     gap: 1.5rem;
@@ -64,8 +64,8 @@
 .cover-img {
     position: absolute;
     bottom: 0;
-    border-radius: 12px 0px 0px 0px;
-    width: 90%;
+    border-radius: 8px 0px 0px 0px;
+    width: 80%;
     height: auto;
     right: 0;
     bottom: 0;
