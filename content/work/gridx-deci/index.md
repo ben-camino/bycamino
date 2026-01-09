@@ -1,7 +1,7 @@
 +++
 title = "Deci AI"
 subtitle = "Agentic utility analytics"
-client = "GridX"
+clients = [ "GridX" ]
 services = [ "UX Design" ]
 contributors = [ "Ben" ]
 date = 2025-08-01

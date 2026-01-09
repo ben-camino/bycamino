@@ -1,7 +1,7 @@
 +++
 title = "Illuminate"
 subtitle = "Webinar simulive & managment"
-client = "ReadyTalk"
+clients = [ "ReadyTalk" ]
 services = [ "UX Design" ]
 contributors = [ "Ben" ]
 date = 2019-01-01

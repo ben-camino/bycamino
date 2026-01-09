@@ -1,7 +1,7 @@
 +++
 title = "GridX Explore"
 subtitle = "Clean energy planning"
-client = "GridX"
+clients = [ "GridX" ]
 services = [ "UX Design" ]
 contributors = [ "Ben" ]
 date = 2024-06-01

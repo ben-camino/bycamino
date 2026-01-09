@@ -1,7 +1,7 @@
 +++
 title = "Foxden"
 subtitle = "Web conferencing"
-client = "ReadyTalk"
+clients = [ "ReadyTalk" ]
 services = [ "UX Design" ]
 contributors = [ "Ben" ]
 date = 2018-01-01

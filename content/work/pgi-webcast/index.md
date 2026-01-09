@@ -1,7 +1,7 @@
 +++
 title = "GlobalMeet"
 subtitle = "Webcast & webinar managment"
-client = "PGi"
+clients = [ "PGi" ]
 services = [ "UX Design" ]
 contributors = [ "Ben" ]
 date = 2021-01-01

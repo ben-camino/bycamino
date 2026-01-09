@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--blue-2);
+    background-color: var(--blue-5);
     box-shadow: var(--shadow-1) 0px 8px 18px;
     overflow: hidden;
     text-decoration: none;
@@ -32,13 +32,13 @@
 .work-item header {
     z-index: 5;
     padding: 1rem;
-    background: linear-gradient(var(--shadow-6), transparent);
+    background: linear-gradient(var(--shadow-5), transparent);
 }
 
 .work-item .title {
     color: var(--white-static);
     margin: 0;
-    text-shadow: var(--shadow-6) 2px 2px 24px;
+    text-shadow: var(--shadow-5) 2px 2px 24px;
     text-transform: capitalize;
 }
 
@@ -55,6 +55,7 @@
     gap: 0.5rem;
     padding: 1rem;
     z-index: 4;
+    transition: all 0.2s ease;
 }
 
 .work-item footer * {
@@ -81,6 +82,11 @@
     transition: all 0.2s ease;
 }
 
+.work-item:hover footer {
+    padding-left: 1.5rem;
+    transition: all 0.2s ease;
+}
+
 .background-img {
     position: absolute;
     left: 0;
@@ -89,5 +95,6 @@
     width: 100%;
     object-fit: cover;
     z-index: 1;
-    filter: brightness(0.75) saturate(0.5);
+    filter: brightness(0.75) saturate(0.75);
+    opacity: 1;
 }
