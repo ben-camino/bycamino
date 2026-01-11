@@ -1,0 +1,15 @@
+{{ if .Get "image" }} {{ $image := .Get "image" }}
+<div class="gallery">
+    {{ range .Page.Resources.ByType "image" }} {{ if strings.Contains .Title
+    $image }} {{ $image := .Resize "2880x webp q90" }} {{ $name :=
+    strings.TrimSuffix (path.Ext .Name) .Name }} {{ $name_fmt := humanize
+    $name}}
+    <img
+        src="{{ $image.RelPermalink }}"
+        width="1440px"
+        height="auto"
+        alt="{{ $name_fmt }}"
+    />
+    {{else}} {{ end }} {{ end }}
+</div>
+{{ else }} {{ end }}

@@ -1,6 +1,7 @@
 {{ define "main" }}
+
+<!-- Aside nav
 <aside>
-    <!-- Range child pages -->
     {{ with .Site.GetPage "/work" }}
     <nav>
         <ul>
@@ -13,14 +14,15 @@
     </nav>
     {{ end }}
 </aside>
+ -->
+
 <main>
     <!-- Header -->
     <header>
         <h1 class="heading-6"><a href="/work/">Work</a> / {{ .Title }}</h1>
-        <h2 class="heading-1">
-            Take a look at our spectacular work, spanning many services and
-            clients
-        </h2>
+        {{ with .Params.Subtitle }}
+        <h2 class="heading-1">{{ . }}</h2>
+        {{ end }}
 
         <!-- Services -->
         {{ with .Params.Services}}
@@ -36,15 +38,6 @@
                 {{ end }}
             </ul>
         </nav>
-        {{ end }}
-
-        <!-- Contributors -->
-        {{ with .GetTerms "contributors" }}
-        <div>
-            {{ range . }}
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            {{ end }}
-        </div>
         {{ end }}
     </header>
 
@@ -62,7 +55,10 @@
     {{ end }}
 </main>
 
-<!-- Table of contents -->
+<!-- Table of contents 
 {{ with .TableOfContents }}
 <aside class="toc">{{ . }}</aside>
-{{ end }} {{ end }}
+{{ end }}
+-->
+
+{{ end }}

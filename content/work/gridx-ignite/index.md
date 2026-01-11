@@ -7,3 +7,7 @@ contributors = [ "Ben", "Paul" ]
 date = 2025-12-01
 featured = true
 +++
+
+This is the description of the project.
+
+{{< gallery image="gallery/" >}}
