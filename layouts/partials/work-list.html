@@ -3,7 +3,7 @@
     <ul class="work-list">
         {{ range . }}
         <li>
-            <a class="work-item" href="{{ .RelPermalink }}">
+            <a class="work-item" href="{{ .RelPermalink }}" data-theme="light">
                 <header>
                     <!-- Title -->
                     <p class="title">{{ .Title }}</p>
@@ -28,13 +28,13 @@
                 <!-- Cover image -->
                 {{ $src := "cover/" }} {{ range .Page.Resources.ByType "image"
                 }} {{ if strings.Contains .Title $src }} {{ $src := .Resize
-                "1920x webp q90" }} {{ $name := strings.TrimSuffix (path.Ext
+                "640x webp q90" }} {{ $name := strings.TrimSuffix (path.Ext
                 .Name) .Name }} {{ $name_fmt := humanize $name}}
                 <img
                     class="cover-img"
                     src="{{ $src.RelPermalink }}"
-                    width="auto"
-                    height="320"
+                    width="320"
+                    height="auto"
                     alt="{{ $name_fmt }}"
                 />
                 {{else}} {{ end }} {{ end }}
@@ -42,12 +42,12 @@
                 <!-- Background image-->
                 {{ $src := "background/" }} {{ range .Page.Resources.ByType
                 "image" }} {{ if strings.Contains .Title $src }} {{ $src :=
-                .Resize "1920x webp q90" }} {{ $name := strings.TrimSuffix
+                .Resize "800x webp q90" }} {{ $name := strings.TrimSuffix
                 (path.Ext .Name) .Name }} {{ $name_fmt := humanize $name}}
                 <img
                     class="background-img"
                     src="{{ $src.RelPermalink }}"
-                    width="960px"
+                    width="400px"
                     height="auto"
                     alt="{{ $name_fmt }}"
                 />

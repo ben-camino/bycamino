@@ -1,0 +1,102 @@
+.featured-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 1.5rem;
+}
+
+.featured-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5%;
+    background: linear-gradient(var(--blue-5), var(--blue-4));
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.featured-item:hover,
+.featured-item:focus {
+    box-shadow: var(--shadow-1) 0px 8px 18px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.featured-item header {
+    z-index: 5;
+    padding: 1rem;
+    width: 100%;
+    max-width: 50%;
+}
+
+.featured-item footer {
+    width: 100%;
+    max-width: 50%;
+}
+
+.featured-item .title {
+    color: var(--blue-1);
+    margin: 0;
+    text-shadow: var(--shadow-5) 2px 2px 24px;
+    text-transform: uppercase;
+}
+
+.featured-item .subtitle {
+    color: var(--blue-0);
+    margin: 0;
+    text-shadow: var(--shadow-6) 2px 2px 24px;
+    text-transform: capitalize;
+}
+
+.featured-item footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+    z-index: 4;
+    transition: all 0.2s ease;
+}
+
+.featured-item footer * {
+    margin: 0;
+}
+
+.featured-item .cover-img {
+    position: absolute;
+    bottom: 0;
+    border-radius: 12px 12px 0px 0px;
+    width: 45%;
+    height: auto;
+    right: 2rem;
+    bottom: 0;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    object-position: top left;
+    transition: all 0.2s ease;
+    z-index: 3;
+}
+
+.featured-item:hover .cover-img {
+    bottom: -8px;
+    transition: all 0.2s ease;
+}
+
+.featured-item .background-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.75) saturate(0.75);
+    opacity: 1;
+}

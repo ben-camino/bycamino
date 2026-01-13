@@ -15,8 +15,8 @@
     transition: all 0.2s ease;
 }
 
-a.service-tag:hover {
-    box-shadow: var(--shadow-4) 0px 0px 4px;
+a.service-tag:hover,
+a.service-tag:focus {
     transition: all 0.2s ease;
 }
 

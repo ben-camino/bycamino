@@ -1,6 +1,6 @@
 .work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     align-items: stretch;
     justify-content: stretch;
     gap: 1.5rem;
@@ -13,8 +13,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--blue-5);
-    box-shadow: var(--shadow-1) 0px 8px 18px;
+    background: linear-gradient(var(--blue-5), var(--blue-4));
+    border-radius: 8px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
@@ -24,7 +24,7 @@
 
 .work-item:hover,
 .work-item:focus {
-    box-shadow: var(--shadow-2) 0px 12px 32px;
+    box-shadow: var(--shadow-1) 0px 8px 18px;
     text-decoration: none;
     transition: all 0.2s ease;
 }
@@ -32,18 +32,17 @@
 .work-item header {
     z-index: 5;
     padding: 1rem;
-    background: linear-gradient(var(--shadow-5), transparent);
 }
 
 .work-item .title {
-    color: var(--white-static);
+    color: var(--blue-1);
     margin: 0;
     text-shadow: var(--shadow-5) 2px 2px 24px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .work-item .subtitle {
-    color: var(--white-static);
+    color: var(--blue-0);
     margin: 0;
     text-shadow: var(--shadow-6) 2px 2px 24px;
     text-transform: capitalize;
@@ -62,7 +61,7 @@
     margin: 0;
 }
 
-.cover-img {
+.work-item .cover-img {
     position: absolute;
     bottom: 0;
     border-radius: 8px 0px 0px 0px;
@@ -82,14 +81,7 @@
     transition: all 0.2s ease;
 }
 
-/*
-.work-item:hover footer {
-    padding-left: calc(1rem + 8px);
-    transition: all 0.2s ease;
-}
-*/
-
-.background-img {
+.work-item .background-img {
     position: absolute;
     left: 0;
     top: 0;

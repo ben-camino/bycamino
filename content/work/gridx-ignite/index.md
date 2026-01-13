@@ -1,6 +1,6 @@
 +++
 title = "GridX Ignite"
-subtitle = "Home energy management"
+subtitle = "Home energy optimization"
 clients = [ "GridX" ]
 services = [ "Web Development", "Messaging" ]
 contributors = [ "Ben", "Paul" ]
@@ -8,6 +8,6 @@ date = 2025-12-01
 featured = true
 +++
 
-This is the description of the project.
+{{< gallery image="onesheet/" >}}
 
-{{< gallery image="gallery/" >}}
+{{< gallery-reverse image="web/" >}}

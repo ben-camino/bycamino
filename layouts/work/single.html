@@ -1,21 +1,5 @@
 {{ define "main" }}
 
-<!-- Aside nav
-<aside>
-    {{ with .Site.GetPage "/work" }}
-    <nav>
-        <ul>
-            {{ range .Pages }}
-            <li>
-                <a class="secondary" href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </li>
-            {{ end }}
-        </ul>
-    </nav>
-    {{ end }}
-</aside>
- -->
-
 <main>
     <!-- Header -->
     <header>
@@ -30,10 +14,8 @@
             <ul class="services">
                 {{ range . }} {{ $class := index
                 $.Site.Params.taxonomies.services . }}
-                <li>
-                    <a href="/" class="service-tag {{ $class }}">
-                        <small>{{ . }}</small>
-                    </a>
+                <li class="service-tag {{ $class }}">
+                    <small>{{ . }}</small>
                 </li>
                 {{ end }}
             </ul>
@@ -54,11 +36,5 @@
     </section>
     {{ end }}
 </main>
-
-<!-- Table of contents 
-{{ with .TableOfContents }}
-<aside class="toc">{{ . }}</aside>
-{{ end }}
--->
 
 {{ end }}

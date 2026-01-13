@@ -7,3 +7,5 @@ contributors = [ "Ben" ]
 date = 2025-01-01
 featured = true
 +++
+
+{{< gallery image="comps/" >}}

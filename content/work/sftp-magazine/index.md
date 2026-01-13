@@ -7,3 +7,7 @@ contributors = [ "Ben" ]
 date = 2019-06-01
 featured = false
 +++
+
+{{< gallery image="magazine" >}}
+
+{{< gallery-reverse image="archives" >}}

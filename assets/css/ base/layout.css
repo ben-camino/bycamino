@@ -1,7 +1,7 @@
 /* Layout */
 
 html {
-    background-color: var(--white);
+    background-color: var(--green-0);
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -9,44 +9,14 @@ html {
 body {
     min-height: 100vh;
     max-width: 1440px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
 }
 
-body:has(aside) {
-    grid-template-columns: 240px 1fr 240px;
-    grid-template-areas:
-        "header header header"
-        "aside main toc"
-        "footer footer footer";
-}
-
-@media (max-width: 768px) {
-    body:has(aside) {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "header"
-            "main"
-            "footer";
-    }
-
-    aside,
-    .toc {
-        display: none;
-    }
-}
-
 body > header {
-    grid-area: header;
     position: sticky;
     top: 0;
-    width: 100%;
     padding: 1rem;
     z-index: 10;
 }
@@ -56,18 +26,20 @@ body > header::before {
     position: absolute;
     top: 0;
     bottom: 0;
+    width: 100vw;
     left: 50%;
     transform: translateX(-50%);
     width: max(100vw, 1280px);
     min-width: 100%;
-    background-color: var(--white);
+    background-color: var(--green-0);
+    border-bottom: solid 1px var(--green-1);
     z-index: -1;
 }
 
 body > main {
-    grid-area: main;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     padding: 2rem 1rem;
     gap: 1.5rem;
     anchor-name: --main;
@@ -75,7 +47,6 @@ body > main {
 
 body > footer {
     position: relative;
-    grid-area: footer;
     padding: 1rem;
     z-index: 10;
 }
@@ -83,41 +54,13 @@ body > footer {
 body > footer::before {
     content: "";
     position: absolute;
+    width: 100vw;
     top: 0;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: max(100vw, 1440px);
-    background-color: var(--grey-0);
-    border-top: solid 1px var(--grey-1);
+    background-color: var(--green-0);
     z-index: -1;
-}
-
-aside {
-    grid-area: aside;
-    max-height: 100vh;
-
-    align-self: start;
-    padding: 1rem;
-    overflow-y: auto;
-    border-right: solid 1px var(--border-subtle);
-}
-
-.toc {
-    grid-area: toc;
-    padding: 1rem;
-    border-left: solid 1px var(--border-subtle);
-    border-right: none;
-}
-
-@supports (anchor-name: --main) {
-    aside {
-        position: fixed;
-        top: anchor(--main top);
-    }
-    .toc {
-        left: anchor(--main right);
-    }
 }
 
 main > header {
@@ -137,19 +80,6 @@ main > header * {
     margin: 0;
 }
 
-nav ol,
-nav ul,
-nav li {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    unicode-bidi: isolate;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 1rem;
-}
-
 nav a {
     color: var(--grey-8);
     display: flex;
@@ -166,4 +96,17 @@ header nav ul,
 header nav li {
     flex-direction: row;
     align-items: center;
+}
+
+nav ol,
+nav ul,
+nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    unicode-bidi: isolate;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
 }
