@@ -3,12 +3,11 @@
     <!-- Header -->
     <header>
         <h1 class="heading-6">{{ .Title }}</h1>
+    </header>
 
     <!-- Markdown -->
     {{ with .Content }}
     <section>{{ . }}</section>
     {{ end }}
-
 </main>
-
 {{ end }}

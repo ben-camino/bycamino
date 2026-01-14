@@ -1,25 +1,15 @@
 {{ define "main" }}
 <main>
     <!-- Header -->
-    <header>
-        <h1 class="heading-6">{{ .Title }}</h1>
-        <h2>Default list layout</h2>
-    </header>
+    {{ partial "work-header.html" . }}
 
-    <!-- Pages -->
-    {{ with .Data.Pages }}
+    <!-- Child pages -->
+    {{ $paginator := .Paginator }} {{ with $paginator.Pages }}
     <nav>
-        <ul>
-            {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ end }}
+        <ul class="work-list">
+            {{ range . }} {{ partial "work-item.html" . }} {{ end }}
         </ul>
     </nav>
-    {{ end }}
-
-    <!-- Markdown -->
-    {{ with .Content }}
-    <section>{{ . }}</section>
-    {{ end }}
+    {{ end }} {{ partial "pagination.html" . }}
 </main>
 {{ end }}

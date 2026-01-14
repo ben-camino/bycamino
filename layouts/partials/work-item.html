@@ -1,0 +1,52 @@
+<li>
+    <a class="work-item" href="{{ .RelPermalink }}" data-theme="light">
+        <header>
+            <!-- Title -->
+            <p class="title">{{ .Title }}</p>
+            <!-- Description -->
+            {{ with .Params.Subtitle }}
+            <h4 class="subtitle heading-3">{{ . }}</h4>
+            {{ end }}
+        </header>
+
+        <!-- Services -->
+        {{ with .Params.Services}}
+        <footer>
+            {{ range . }} {{ $class := index $.Site.Params.taxonomies.services .
+            }}
+            <p class="service-tag {{ $class }}">
+                <small>{{ . }}</small>
+            </p>
+            {{ end }}
+        </footer>
+        {{ end }}
+
+        <!-- Cover image -->
+        {{ $src := "cover/" }} {{ range .Page.Resources.ByType "image" }} {{ if
+        strings.Contains .Title $src }} {{ $src := .Resize "640x webp q90" }} {{
+        $name := strings.TrimSuffix (path.Ext .Name) .Name }} {{ $name_fmt :=
+        humanize $name}}
+        <img
+            class="cover-img"
+            src="{{ $src.RelPermalink }}"
+            width="320"
+            height="auto"
+            alt="{{ $name_fmt }}"
+        />
+        {{else}} {{ end }} {{ end }}
+
+        <!-- Background image-->
+        {{ $src := "background/" }} {{ range .Page.Resources.ByType "image" }}
+        {{ if strings.Contains .Title $src }} {{ $src := .Resize "800x webp q90"
+        }} {{ $name := strings.TrimSuffix (path.Ext .Name) .Name }} {{ $name_fmt
+        := humanize $name}}
+        <img
+            class="background-img"
+            src="{{ $src.RelPermalink }}"
+            width="400px"
+            height="auto"
+            alt="{{ $name_fmt }}"
+        />
+        {{else}} {{ end }} {{ end }}
+    </a>
+</li>

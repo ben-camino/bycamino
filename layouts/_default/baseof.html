@@ -55,15 +55,11 @@
                         >
                     </li>
                 </ul>
-                {{ with .Site.GetPage "/" }}
                 <ul>
-                    {{ range .Pages }}
                     <li>
-                        <a href="{{ .RelPermalink}}">{{ .Title }}</a>
+                        <a class="button" href="contact/">Contact Us</a>
                     </li>
-                    {{ end }}
                 </ul>
-                {{ end }}
             </nav>
         </header>
 

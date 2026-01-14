@@ -1,81 +1,16 @@
 {{ define "main" }}
 <main>
     <!-- Header -->
-    <header>
-        <h1 class="heading-1">
-            This is a smart way of saying what Camino is all about.
-        </h1>
-    </header>
+    {{ partial "work-header.html" . }}
 
     <!-- Featured pages -->
     {{ with .RegularPagesRecursive }}
     <nav>
         <ul class="work-list">
-            {{ range . }} {{ if .Params.Featured }}
-            <li>
-                <a
-                    class="work-item"
-                    href="{{ .RelPermalink }}"
-                    data-theme="light"
-                >
-                    <header>
-                        <!-- Title -->
-                        <p class="title">{{ .Title }}</p>
-                        <!-- Description -->
-                        {{ with .Params.Subtitle }}
-                        <h2 class="subtitle">{{ . }}</h2>
-                        {{ end }}
-                    </header>
-
-                    <!-- Services -->
-                    {{ with .Params.Services}}
-                    <footer>
-                        {{ range . }} {{ $class := index
-                        $.Site.Params.taxonomies.services . }}
-                        <p class="service-tag {{ $class }}">
-                            <small>{{ . }}</small>
-                        </p>
-                        {{ end }}
-                    </footer>
-                    {{ end }}
-
-                    <!-- Cover image -->
-                    {{ $src := "cover/" }} {{ range .Page.Resources.ByType
-                    "image" }} {{ if strings.Contains .Title $src }} {{ $src :=
-                    .Resize "1440x webp q90" }} {{ $name := strings.TrimSuffix
-                    (path.Ext .Name) .Name }} {{ $name_fmt := humanize $name}}
-                    <img
-                        class="cover-img"
-                        src="{{ $src.RelPermalink }}"
-                        width="720px"
-                        height="auto"
-                        alt="{{ $name_fmt }}"
-                    />
-                    {{else}} {{ end }} {{ end }}
-
-                    <!-- Background image-->
-                    {{ $src := "background/" }} {{ range .Page.Resources.ByType
-                    "image" }} {{ if strings.Contains .Title $src }} {{ $src :=
-                    .Resize "2880x webp q90" }} {{ $name := strings.TrimSuffix
-                    (path.Ext .Name) .Name }} {{ $name_fmt := humanize $name}}
-                    <img
-                        class="background-img"
-                        src="{{ $src.RelPermalink }}"
-                        width="1440px"
-                        height="auto"
-                        alt="{{ $name_fmt }}"
-                    />
-                    {{else}} {{ end }} {{ end }}
-                </a>
-            </li>
+            {{ range . }} {{ if .Params.Featured }} {{ partial "work-item" . }}
             {{ end }} {{ else }}{{ end }}
         </ul>
     </nav>
-    {{ end }}
-
-    <!-- Markdown -->
-    {{ with .Content }}
-    <section>{{ . }}</section>
     {{ end }}
 </main>
 {{ end }}
