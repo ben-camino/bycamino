@@ -1,6 +1,6 @@
 .work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     align-items: stretch;
     justify-content: stretch;
     gap: 1.5rem;
@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(var(--blue-5), var(--blue-4));
+    background: var(--blue-5);
     border-radius: 8px;
     overflow: hidden;
     text-decoration: none;
@@ -35,10 +35,10 @@
 }
 
 .work-item .title {
-    color: var(--blue-1);
+    color: var(--blue-2);
     margin: 0;
     text-shadow: var(--shadow-5) 2px 2px 24px;
-    text-transform: uppercase;
+    text-transform: captialize;
 }
 
 .work-item .subtitle {
@@ -81,6 +81,18 @@
     transition: all 0.2s ease;
 }
 
+.work-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, var(--blue-9), transparent);
+    opacity: 1;
+    z-index: 2;
+}
+
 .work-item .background-img {
     position: absolute;
     left: 0;
@@ -88,7 +100,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    z-index: 1;
     filter: brightness(0.75) saturate(0.75);
     opacity: 1;
+    z-index: 1;
 }

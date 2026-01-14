@@ -6,6 +6,7 @@ services = [ "UX Design" ]
 contributors = [ "Ben" ]
 date = 2025-01-01
 featured = true
+weight = 8
 +++
 
 {{< gallery image="comps/" >}}

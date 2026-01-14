@@ -4,6 +4,7 @@ subtitle = "Educdational Programming"
 clients = [ "Committee for Children" ]
 services = [ "Messaging" ]
 contributors = [ "Paul" ]
-date = 2024-01-01
-featured = false
+date = 2025-01-01
+featured = true
+weight = 1
 +++

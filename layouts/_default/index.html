@@ -10,11 +10,11 @@
     <!-- Featured pages -->
     {{ with .RegularPagesRecursive }}
     <nav>
-        <ul class="featured-list">
+        <ul class="work-list">
             {{ range . }} {{ if .Params.Featured }}
             <li>
                 <a
-                    class="featured-item"
+                    class="work-item"
                     href="{{ .RelPermalink }}"
                     data-theme="light"
                 >
