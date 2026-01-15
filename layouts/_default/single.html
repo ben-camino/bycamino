@@ -1,13 +1,25 @@
 {{ define "main" }}
 <main>
-    <!-- Header -->
+    <!-- Markdown -->
     <header>
-        <h1 class="heading-6">{{ .Title }}</h1>
+        {{ with .Title }}
+        <h1 class="heading-6">{{ . }}</h1>
+        {{ end }} {{ with .Params.Subtitle }}
+        <h2 class="heading-1">{{ . }}</h2>
+        {{ end }}
     </header>
 
     <!-- Markdown -->
     {{ with .Content }}
     <section>{{ . }}</section>
+    {{ end }}
+
+    <!-- Next page -->
+    {{ with .PrevInSection }}
+    <section>
+        <h4>Next:</h4>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </section>
     {{ end }}
 </main>
 {{ end }}

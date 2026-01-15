@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Contributors on Camino</title><link>https://bycamino.com/contributors/</link><description>Recent content in Contributors on Camino</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bycamino.com/contributors/index.xml" rel="self" type="application/rss+xml"/><item><title>Ben</title><link>https://bycamino.com/contributors/ben/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>https://bycamino.com/contributors/ben/</guid><description/></item><item><title>Paul</title><link>https://bycamino.com/contributors/paul/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>https://bycamino.com/contributors/paul/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contributors on Camino</title>
+    <link>https://bycamino.com/contributors/</link>
+    <description>Recent content in Contributors on Camino</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://bycamino.com/contributors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ben</title>
+      <link>https://bycamino.com/contributors/ben/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://bycamino.com/contributors/ben/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Paul</title>
+      <link>https://bycamino.com/contributors/paul/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://bycamino.com/contributors/paul/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

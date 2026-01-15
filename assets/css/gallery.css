@@ -8,7 +8,7 @@
 
 .gallery-text {
     position: sticky;
-    top: 3.5rem;
+    top: 0;
     max-width: 400px;
     margin-bottom: 1rem;
 }

@@ -11,4 +11,4 @@ contributors = [ "ben" ]
   "Web Development" = "service-web-development"
   "Messaging" = "service-messaging"
 [pagination]
-  pagerSize = 12
+  pagerSize = 8
