@@ -1,4 +1,4 @@
-baseURL = 'https://bycamino.com/'
+baseURL = 'https://bycamino.netlify.app/'
 languageCode = 'en-us'
 title = 'Camino'
 contributors = [ "ben" ]
