@@ -35,9 +35,11 @@
     </header>
 
     <!-- List Pages -->
+
+    {{ $paginator := .Paginator }} {{ with $paginator.Pages }}
     <nav>
         <ul class="work-list">
-            {{ range .Data.Pages }}
+            {{ range . }}
             <!-- Work Item -->
             <li>
                 <a
@@ -99,5 +101,24 @@
             {{ end }}
         </ul>
     </nav>
+    {{ end }}
+
+    <!-- Pagination-->
+    {{ $paginator := .Paginator }} {{ if gt $paginator.TotalPages 1 }}
+    <footer class="pagination">
+        <nav>
+            {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}">←</a>
+            {{ else }}
+            <p>←</p>
+            {{ end }} {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}">→</a>
+            {{ else }}
+            <p>→</p>
+            {{ end }}
+        </nav>
+        <p>Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</p>
+    </footer>
+    {{ end }}
 </main>
 {{ end }}
