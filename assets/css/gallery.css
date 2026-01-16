@@ -4,6 +4,7 @@
     align-items: flex-start;
     gap: 2rem;
     margin-bottom: 4rem;
+    min-height: 100%;
 }
 
 .gallery-text {
@@ -11,6 +12,7 @@
     top: 0;
     max-width: 400px;
     margin-bottom: 1rem;
+    align-self: flex-start;
 }
 
 .gallery-images {

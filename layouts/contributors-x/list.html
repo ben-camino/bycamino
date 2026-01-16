@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main>
+    <!-- Header -->
+    <header>
+        <h1 class="heading-6">{{ .Title }}</h1>
+        <h2 class="heading-1">
+            Take a look at {{.Title}}'s spectacular work, spanning many clients
+            and services.
+        </h2>
+    </header>
+
+    <!-- List pages -->
+    {{ partial "work-list.html" . }}
+</main>
+{{ end }}
