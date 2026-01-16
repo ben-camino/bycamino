@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Services on Camino</title><link>https://bycamino.netlify.app/services/</link><description>Recent content in Services on Camino</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bycamino.netlify.app/services/index.xml" rel="self" type="application/rss+xml"/><item><title>Messaging</title><link>https://bycamino.netlify.app/services/messaging/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>https://bycamino.netlify.app/services/messaging/</guid><description/></item><item><title>Web Development</title><link>https://bycamino.netlify.app/services/web-development/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>https://bycamino.netlify.app/services/web-development/</guid><description/></item><item><title>UX Design</title><link>https://bycamino.netlify.app/services/ux-design/</link><pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate><guid>https://bycamino.netlify.app/services/ux-design/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Camino</title>
+    <link>http://localhost:1313/services/</link>
+    <description>Recent content in Services on Camino</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/services/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Messaging</title>
+      <link>http://localhost:1313/services/messaging/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/messaging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>http://localhost:1313/services/web-development/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UX Design</title>
+      <link>http://localhost:1313/services/ux-design/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/ux-design/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

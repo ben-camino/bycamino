@@ -1,1 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clients on Camino</title><link>https://bycamino.netlify.app/clients/</link><description>Recent content in Clients on Camino</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://bycamino.netlify.app/clients/index.xml" rel="self" type="application/rss+xml"/><item><title>GridX</title><link>https://bycamino.netlify.app/clients/gridx/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>https://bycamino.netlify.app/clients/gridx/</guid><description/></item><item><title>Branding Mag</title><link>https://bycamino.netlify.app/clients/branding-mag/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate><guid>https://bycamino.netlify.app/clients/branding-mag/</guid><description/></item><item><title>SBL</title><link>https://bycamino.netlify.app/clients/sbl/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate><guid>https://bycamino.netlify.app/clients/sbl/</guid><description/></item><item><title>Westword</title><link>https://bycamino.netlify.app/clients/westword/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate><guid>https://bycamino.netlify.app/clients/westword/</guid><description/></item><item><title>Committee for Children</title><link>https://bycamino.netlify.app/clients/committee-for-children/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://bycamino.netlify.app/clients/committee-for-children/</guid><description/></item><item><title>JumpCloud</title><link>https://bycamino.netlify.app/clients/jumpcloud/</link><pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate><guid>https://bycamino.netlify.app/clients/jumpcloud/</guid><description/></item><item><title>PGi</title><link>https://bycamino.netlify.app/clients/pgi/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://bycamino.netlify.app/clients/pgi/</guid><description/></item><item><title>SftP</title><link>https://bycamino.netlify.app/clients/sftp/</link><pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate><guid>https://bycamino.netlify.app/clients/sftp/</guid><description/></item><item><title>ReadyTalk</title><link>https://bycamino.netlify.app/clients/readytalk/</link><pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate><guid>https://bycamino.netlify.app/clients/readytalk/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clients on Camino</title>
+    <link>http://localhost:1313/clients/</link>
+    <description>Recent content in Clients on Camino</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/clients/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GridX</title>
+      <link>http://localhost:1313/clients/gridx/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/clients/gridx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Branding Mag</title>
+      <link>http://localhost:1313/clients/branding-mag/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/clients/branding-mag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SBL</title>
+      <link>http://localhost:1313/clients/sbl/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/clients/sbl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Westword</title>
+      <link>http://localhost:1313/clients/westword/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/clients/westword/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Committee for Children</title>
+      <link>http://localhost:1313/clients/committee-for-children/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/clients/committee-for-children/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JumpCloud</title>
+      <link>http://localhost:1313/clients/jumpcloud/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/clients/jumpcloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PGi</title>
+      <link>http://localhost:1313/clients/pgi/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/clients/pgi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SftP</title>
+      <link>http://localhost:1313/clients/sftp/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/clients/sftp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ReadyTalk</title>
+      <link>http://localhost:1313/clients/readytalk/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/clients/readytalk/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
