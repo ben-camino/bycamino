@@ -2,13 +2,10 @@
 <main>
     <!-- Header -->
     <header>
-        {{ with .Title }}
-        <h1 class="heading-6">{{ . }}</h1>
-        {{ end }} {{ with .Params.Subtitle }}
-        <h2 class="heading-1">{{ . }}</h2>
-        {{ end }} {{ with .Description }}
-        <p>{{ . }}</p>
-        {{ end }}
+        <h1 class="heading-1">
+            Take a look at our spectacular work, spanning many services and
+            clients.
+        </h1>
         <!-- Services -->
         <nav>
             <ul class="services">
@@ -21,17 +18,30 @@
                     <a class="service-tag" href="/"><small>All Work</small></a>
                     {{ end }}
                 </li>
-                {{ range $name, $taxonomy := .Site.Taxonomies.services }} {{
-                $class := index $.Site.Params.taxonomies.services $name }} {{
-                $active := "" }} {{ if eq $taxonomy.Page.Permalink $.Permalink
-                }} {{ $active = "active" }} {{ end }}
-                <a
-                    class="service-tag {{ $class }} {{ $active }}"
-                    href="{{ $taxonomy.Page.Permalink }}"
-                >
-                    <small>{{ $taxonomy.Page.Title }}</small>
-                </a>
-                {{ end }}
+                <li>
+                    <a
+                        class="service-tag service-ux-design"
+                        href="/services/ux-design"
+                    >
+                        <small>UX Design</small>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="service-tag service-web-development"
+                        href="/services/web-development"
+                    >
+                        <small>Web Development</small>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="service-tag service-messaging"
+                        href="/services/messaging"
+                    >
+                        <small>Messaging</small>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>

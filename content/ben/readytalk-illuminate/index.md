@@ -1,9 +1,8 @@
 +++
 title = "Illuminate"
-subtitle = "Webinar simulive & managment"
+subtitle = "Webinar simulive & management"
 clients = [ "ReadyTalk" ]
 services = [ "UX Design" ]
-contributors = [ "Ben" ]
 date = 2019-01-01
 featured = false
 +++
