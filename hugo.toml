@@ -1,14 +1,10 @@
 baseURL = 'https://bycamino.netlify.app/'
 languageCode = 'en-us'
 title = 'Camino'
-
 [taxonomies]
   contributor = 'contributors'
   service = 'services'
   client = 'clients'
-[params.taxonomies.services]
-  "UX Design" = "service-ux-design"
-  "Web Development" = "service-web-development"
-  "Messaging" = "service-messaging"
-[pagination]
-  pagerSize = 8
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
